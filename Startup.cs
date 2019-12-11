@@ -4,6 +4,7 @@
 
 using BoutinFlegel.Authentication.Data;
 using BoutinFlegel.Authentication.Models;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -65,6 +66,25 @@ namespace BoutinFlegel.Authentication
 			// not recommended for production - you need to store your key material somewhere secure
 			builder.AddDeveloperSigningCredential();
 
+			services.AddAuthorization(options =>
+			{
+				options.AddPolicy("protectedScope", policy =>
+				{
+					policy.RequireClaim("scope", "grpc_protected_scope");
+				});
+			});
+
+			services.AddAuthorizationPolicyEvaluator();
+
+			services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+				.AddIdentityServerAuthentication(options =>
+				{
+					options.Authority = "https://localhost:44352";
+					options.ApiName = "ProtectedGrpc";
+					options.ApiSecret = "grpc_protected_secret";
+					options.RequireHttpsMetadata = false;
+				});
+
 			services.AddAuthentication()
 				.AddGoogle(options =>
 				{
@@ -74,6 +94,11 @@ namespace BoutinFlegel.Authentication
 					options.ClientId = "copy client ID from Google here";
 					options.ClientSecret = "copy client secret from Google here";
 				});
+
+			services.AddGrpc(options =>
+			{
+				options.EnableDetailedErrors = true;
+			});
 		}
 
 		public void Configure(IApplicationBuilder app)
