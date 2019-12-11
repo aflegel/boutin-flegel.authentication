@@ -2,8 +2,6 @@ syntax = "proto3";
 
 option csharp_namespace = "BoutinFlegel.Authentication.Proto";
 
-//package Greet;
-
 // The greeting service definition.
 service Greeter {
   // Sends a greeting

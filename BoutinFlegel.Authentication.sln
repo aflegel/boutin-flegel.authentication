@@ -7,9 +7,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoutinFlegel.Authentication
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BoutinFlegel.Authentication.Proto", "BoutinFlegel.Authentication.Proto\BoutinFlegel.Authentication.Proto.shproj", "{BD25A06B-6012-4A1E-A21B-7B911E8EBC93}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{73AC9511-F054-4AEB-806B-D22F9DB0F02C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\BoutinFlegel.Authentication.Proto\BoutinFlegel.Authentication.Proto.projitems*{bd25a06b-6012-4a1e-a21b-7b911e8ebc93}*SharedItemsImports = 13
+		BoutinFlegel.Authentication.Proto\BoutinFlegel.Authentication.Proto.projitems*{bd25a06b-6012-4a1e-a21b-7b911e8ebc93}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
