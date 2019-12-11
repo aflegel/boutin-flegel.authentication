@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoutinFlegel.Authentication", "BoutinFlegel.Authentication.csproj", "{502260B8-3CDC-48CE-AA76-33EA7F435E8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoutinFlegel.Authentication", "BoutinFlegel.Authentication\BoutinFlegel.Authentication.csproj", "{502260B8-3CDC-48CE-AA76-33EA7F435E8D}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BoutinFlegel.Authentication.Proto", "..\BoutinFlegel.Authentication.Proto\BoutinFlegel.Authentication.Proto.shproj", "{BD25A06B-6012-4A1E-A21B-7B911E8EBC93}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BoutinFlegel.Authentication.Proto", "BoutinFlegel.Authentication.Proto\BoutinFlegel.Authentication.Proto.shproj", "{BD25A06B-6012-4A1E-A21B-7B911E8EBC93}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
